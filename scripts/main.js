@@ -41,6 +41,8 @@ elements.forEach(el => el.addEventListener('click', () => {
       </div>
       <h2 class="element">${element.symbol}</h2>
       <p class="element_name">${element.name}</p>
+      <p class="element_group">Group: ${element.groupBlock}</p>
+      <p class="element_year">Year discovered: ${element.yearDiscovered}</p>
     `
 
   modal.children[0].innerHTML = html
