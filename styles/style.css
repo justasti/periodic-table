@@ -32,19 +32,19 @@ section {
   z-index: 3;
   transition: scale 0.2s ease;
 }
-.atomic_number {
+.element_wrapper .atomic_number {
   font-size: 0.85rem;
   position: absolute;
   inset: 2px auto auto 5px;
 }
-.element {
+.element_wrapper .element {
   font-size: 2rem;
   font-weight: 500;
   position: absolute;
   inset: 50% auto auto 50%;
   translate: -50% -50%;
 }
-.element_name {
+.element_wrapper .element_name {
   font-size: 0.85rem;
   margin-inline: 0.15rem;
   margin-bottom: 0.15rem;
@@ -99,15 +99,55 @@ section {
   place-content: center;
   display: none;
 }
+.active {
+  display: grid;
+}
 .modal {
   background-color: #fff;
   /* width: 400px; */
-  padding: 2rem;
+  /* padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  border-radius: 8px;
+  gap: 1rem; */
+border-radius: 16px;
 }
-.active {
-  display: grid;
+.modal .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  border-radius: 10px;
+}
+.wrapper .top_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+.top_row .atomic_number {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.top_row .atomic_mass {
+  font-size: 1rem;
+}
+.wrapper .oxidation_states {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.wrapper h2 {
+  font-size: 10rem;
+  font-weight: 700;
+  padding-inline: 3rem;
+}
+.wrapper .element_name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
