@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Golos Text', sans-serif;
+}
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+section {
+  display: grid;
+  grid-template: repeat(7, 80px) 25px repeat(2, 80px) / repeat(3, 70px) 25px repeat(
+      15,
+      70px
+    );
+  gap: 2px;
+}
+.element_wrapper {
+  position: relative;
+  display: grid;
+  align-items: end;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.element_wrapper:not(.no_hover):hover {
+  scale: 1.2;
+  border: 3px solid #fff;
+  z-index: 3;
+  transition: scale 0.2s ease;
+}
+.atomic_number {
+  font-size: 0.85rem;
+  position: absolute;
+  inset: 2px auto auto 5px;
+}
+.element {
+  font-size: 2rem;
+  font-weight: 500;
+  position: absolute;
+  inset: 50% auto auto 50%;
+  translate: -50% -50%;
+}
+.element_name {
+  font-size: 0.85rem;
+  margin-inline: 0.15rem;
+  margin-bottom: 0.15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dark_blue {
+  background-color: #e2eeff;
+  color: #186ff2;
+}
+.red {
+  background-color: #ffe7e7;
+  color: #d60451;
+}
+.light_blue {
+  background-color: #d8f8ff;
+  color: #1c788c;
+}
+.purple {
+  background-color: #f3e8fd;
+  color: #6232ec;
+}
+.actinoids {
+  background-color: #ffe6d4;
+  color: #c84427;
+}
+.lanthanoids {
+  background-color: #dff3ff;
+  color: #00426b;
+}
+.green {
+  background-color: #d6f9e8;
+  color: #002c00;
+}
+.yellow {
+  background-color: #fef7e0;
+  color: #945733;
+}
+.pink {
+  background-color: #ffe7eb;
+  color: #cd1d5e;
+}
+.grey {
+  background-color: #e7e7ea;
+  color: #3f374f;
+}
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: #000000aa;
+  place-content: center;
+  display: none;
+}
+.modal {
+  background-color: #fff;
+  /* width: 400px; */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 8px;
+}
+.active {
+  display: grid;
+}
