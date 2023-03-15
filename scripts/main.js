@@ -9,7 +9,7 @@ fetch('./scripts/elements.json')
   .then(data => elementsArr = data)
 
 
-elements.forEach(el => el.addEventListener('click', () => {
+elements.forEach(el => el.addEventListener('click', (e) => {
   backdrop.classList.add('active')
   el.classList.add("no_hover")
 
@@ -28,7 +28,7 @@ elements.forEach(el => el.addEventListener('click', () => {
   oxStates.forEach(state => {
     if (state === 'unknown') return
     oxStatesHtml += `
-    <p>${state}</p>
+    <p style='background-color: ${getComputedStyle(el.children[1]).color}'>${state > 0 ? '+' + state : state}</p>
   `})
 
   html = `

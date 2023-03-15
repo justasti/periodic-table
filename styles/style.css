@@ -116,6 +116,8 @@ border-radius: 16px;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  gap: 1rem;
+  width: 300px;
   position: relative;
   border-radius: 10px;
 }
@@ -126,8 +128,15 @@ border-radius: 16px;
   align-self: stretch;
 }
 .top_row .atomic_number {
+  background-color: #fff;
+  box-shadow: 0px 0px 6px 2px #fff ;
+  border-radius: 50%;
+  height: 3rem;
+  aspect-ratio: 1/1;
   font-size: 1.5rem;
   font-weight: 500;
+  display: grid;
+  place-content: center;
 }
 .top_row .atomic_mass {
   font-size: 1rem;
@@ -135,11 +144,22 @@ border-radius: 16px;
 .wrapper .oxidation_states {
   display: flex;
   flex-direction: column;
+  gap: 2px;
   align-items: end;
   position: absolute;
   left: 10px;
   top: 50%;
   translate: 0 -50%;
+  font-size: 0.9rem;
+}
+.oxidation_states p {
+  color: #fff;
+  font-size: 0.75rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-content: center;
 }
 .wrapper h2 {
   font-size: 10rem;
@@ -156,12 +176,11 @@ border-radius: 16px;
   text-transform: capitalize;
   font-size: 1rem;
   color: #555;
-  margin-top: 1rem;
 }
 .wrapper .element_year {
   align-self: flex-start;
   text-transform: capitalize;
   font-size: 1rem;
   color: #555;
-  margin-top: 0.25rem;
+  margin-top: -0.5rem;
 }
